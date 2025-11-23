@@ -46,9 +46,9 @@
 
 &nbsp;	python manage.py runserver
 
-
-
-
+**7**. Logar no site**
+Login: 1
+Senha: 123
 
 **SE DER ERRO NA TORA DE VENV VENV** 
 
