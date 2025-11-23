@@ -19,7 +19,8 @@ HospitalTech/
 
 
 git clone https://github.com/fernando-s-barreto/hospital-caminho-do-ceu.git
-Acesse a pasta do projeto:
+Acesse a pasta do projeto: Hospital-Caminho-do-Ceu-main/
+
 
 🐍 2. Criar e Ativar o Ambiente Virtual
 Criar o ambiente:
