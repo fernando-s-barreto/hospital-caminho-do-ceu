@@ -1,93 +1,71 @@
-**1. Clonar o Repositório**
-
-&nbsp;	git clone https://github.com/fernando-s-barreto/hospital-caminho-do-ceu.git
-
-
-
-**Em seguida, navegue para o diretório do projeto:**
-
-&nbsp;	cd Hospital-Caminho-do-Ceu
+HospitalTech – Guia de Instalação
+1. Clonar o Repositório
+git clone https://github.com/fernando-s-barreto/hospital-caminho-do-ceu.git
 
 
+Acesse a pasta do projeto:
 
-**2. Criar e Ativar o Ambiente Virtual**
+cd HospitalTech
 
-&nbsp;	python -m venv venv
+2. Criar e Ativar o Ambiente Virtual
 
-
-
-**Comando para Ativar**
-
-&nbsp;	Windows (PowerShell)	venv\\Scripts\\activate.bat
-
-&nbsp;	Windows (CMD)	venv\\Scripts\\activate.bat
-
-
-
-**3. Instalar as Dependências**
-
-&nbsp;	pip install -r requirements.txt
-
-
-
-**4. Configurar e Migrar o Banco de Dados**
-
-&nbsp;	python manage.py migrate
-
-
-
-**5. Criar um Superusuário (Opcional, mas Recomendado)**
-
-&nbsp;	python manage.py createsuperuser
-
-
-
-**6. Rodar o Servidor**
-
-&nbsp;	python manage.py runserver
-
-**7**. Logar no site**
-Login: 1
-Senha: 123
-
-**SE DER ERRO NA TORA DE VENV VENV** 
-
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-
-
-Rodar a Venv
-venv\\Scripts\\Activate.ps1
-
-**Se não conseguir pip install -r requirements.txt **
-
-Apague a pasta venv:
-
-Remove-Item -Recurse -Force .\venv
-
-
-Crie novamente o ambiente virtual:
+Criar ambiente virtual:
 
 python -m venv venv
 
 
-Ative:
+Ativar no PowerShell:
 
-.\venv\Scripts\Activate.ps1
-
-
-Atualize o pip:
-
-python -m pip install --upgrade pip
+venv\Scripts\Activate.ps1
 
 
-(Opcional) Reinstale os pacotes necessários:
+Ativar no CMD:
 
+venv\Scripts\activate.bat
+
+
+Se ocorrer erro de permissão no PowerShell:
+
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+3. Instalar Dependências
 pip install -r requirements.txt
 
+4. Migrar o Banco de Dados
+python manage.py migrate
 
-Agora rode:
+5. Carregar Usuário Padrão
+python manage.py loaddata admin_default.json
 
-pip freeze > requirements.txt
 
-# Não suba a VENV no hub
+Login padrão:
 
+Login: admin
+
+Senha: admin123
+
+6. Iniciar o Servidor
+python manage.py runserver
+
+
+Acesse no navegador:
+
+http://127.0.0.1:8000/
+
+Observações Importantes
+
+Não envie a pasta venv para o GitHub.
+
+Caso o pip install -r requirements.txt apresente erro:
+
+Apague a pasta venv
+
+Crie novamente:
+
+python -m venv venv
+
+
+Ative e rode:
+
+pip install --upgrade pip
+pip install -r requirements.txt
